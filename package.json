@@ -1,0 +1,22 @@
+{
+  "name": "geo",
+  "version": "1.0.0",
+  "description": "For now: smart contracts to bu use in a Geocachin dApp. Unfinished.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattSaeeda/GeoCacheing.git"
+  },
+  "author": "Matt Saeeda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MattSaeeda/GeoCacheing/issues"
+  },
+  "homepage": "https://github.com/MattSaeeda/GeoCacheing#readme"
+}
