@@ -1,16 +1,20 @@
+
 pragma solidity >0.4.99 <0.6.0;
+//import "../contracts/Cache.sol";
+import "../contracts/Storage.sol";
 
 contract Cache {
-      function itemOwner() public pure returns (address){}
+      // function itemOwner() public pure returns (address){}
       function name() public pure returns (string memory) {}
       function inChache() public pure returns (bool) {}
       function coordinates() public pure returns (bytes32) {}
       function putItemInCache() public;
       function removeItemFromChache() public;
       function showItemSpecs() public returns(address, string memory, bool, bytes32);
+      function changeItemOwnership(address) public;
   }   
 
-contract GeoCacher {
+contract GeoCacher is Storage {
 
   address public owner;
 
@@ -19,10 +23,14 @@ contract GeoCacher {
   }
 
   address[] bag;
-
   Cache newItem;
+
+  modifier onlyOwner() {
+	  require(msg.sender == owner);
+		_;
+	}
   
-  function createItem(bytes memory code, uint256 salt) public returns (address){
+  function createItem(bytes memory code, uint256 salt) public onlyOwner returns (address){
     address addr;
     assembly {
       addr := create2(0, add(code, 0x20), mload(code), salt)
@@ -34,16 +42,18 @@ contract GeoCacher {
     return addr;
   }
 
-  function setAllBags(address[] memory newBag) private {
-    bag = newBag;
-  }
+  // function setAllBags(address[] memory newBag) private {
+  //   bag = newBag;
+  //   Storage.setAddress("bag" , newBag );
+  // }
 
-  function claimOwnershipOfItem(address  _item) public{
+  function claimOwnershipOfItem(address  _item) public onlyOwner {
     bag.push(_item);
-
+    newItem = Cache(_item);
+    newItem.changeItemOwnership(_item);
   }
 
-  function listChacherItems() public view returns ( address[] memory ){
+  function listChacherItems() public onlyOwner view returns ( address[] memory ){
       uint counter = 0;
       for (uint j = 0; j<bag.length; j++) {
           counter++;
@@ -65,14 +75,14 @@ contract GeoCacher {
     
   }
 
-  function placeItemInCache(address _item) public returns(bool) {
+  function placeItemInCache(address _item) public onlyOwner returns(bool) {
     newItem = Cache(_item);
     require(newItem.inChache() == false);
     newItem.putItemInCache();
     return true;
   }
 
-  function eliminateItemFromCache(address _item) public returns (bool) {
+  function eliminateItemFromCache(address _item) public onlyOwner returns (bool) {
     newItem = Cache(_item);
     require(newItem.inChache() == true);
     newItem.removeItemFromChache();
