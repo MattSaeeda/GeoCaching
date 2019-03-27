@@ -4,6 +4,7 @@ contract Storage {
 
   mapping(address => mapping(bytes32 => uint256)) _uintStorage;
   mapping(address => mapping(bytes32 => address)) _addressStorage;
+  mapping(address => mapping(bytes32 => address[])) _addressArrayStorage;
   mapping(address => mapping(bytes32 => bool)) _boolStorage;
   mapping(address => mapping(bytes32 => bytes32)) _bytes32Storage;
   mapping(address => mapping(bytes32 => string)) _stringStorage;
@@ -12,6 +13,10 @@ contract Storage {
 
   function getAddress(bytes32 key) public view returns (address) {
       return _addressStorage[msg.sender][key];
+  }
+
+  function getAddressArray(bytes32 key) public view returns (address[] memory) {
+      return _addressArrayStorage[msg.sender][key];
   }
 
   function getUint(bytes32 key) public view returns (uint) {
@@ -32,9 +37,18 @@ contract Storage {
 
   //Set Functions
 
-  function setAddress(bytes32 key, address value) public {
+  function setAddressArray(bytes32 key, address[] memory value) public {
+    _addressArrayStorage[msg.sender][key] = value;
+  }
+
+  function updateAddressArray(bytes32 key, address  value) public {
+    _addressArrayStorage[msg.sender][key].push(value);
+  }
+
+   function setAddress(bytes32 key, address value) public {
     _addressStorage[msg.sender][key] = value;
   }
+
 
   function setUint(bytes32 key, uint value) public {
       _uintStorage[msg.sender][key] = value;

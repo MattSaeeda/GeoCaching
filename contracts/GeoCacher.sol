@@ -42,20 +42,21 @@ contract GeoCacher is Storage {
     return addr;
   }
 
-  // function setAllBags(address[] memory newBag) private {
-  //   bag = newBag;
-  //   Storage.setAddress("bag" , newBag );
-  // }
+  function setTheBag() private {
+    address[] memory someBag;
+    Storage.setAddressArray("bag" , someBag );
+  }
 
   function claimOwnershipOfItem(address  _item) public onlyOwner {
-    bag.push(_item);
+    Storage.updateAddressArray("bag" , _item );
     newItem = Cache(_item);
     newItem.changeItemOwnership(_item);
   }
 
-  function listChacherItems() public onlyOwner view returns ( address[] memory ){
+  function listChacherItems() public  onlyOwner view returns ( address[] memory ){
       uint counter = 0;
-      for (uint j = 0; j<bag.length; j++) {
+      address[] storage t = getAddressArray(bag);
+      for (uint j = 0; j<t.length; j++) {
           counter++;
       }
 
@@ -77,14 +78,14 @@ contract GeoCacher is Storage {
 
   function placeItemInCache(address _item) public onlyOwner returns(bool) {
     newItem = Cache(_item);
-    require(newItem.inChache() == false);
+    //require(newItem.getinCache("inCache") == false);
     newItem.putItemInCache();
     return true;
   }
 
   function eliminateItemFromCache(address _item) public onlyOwner returns (bool) {
     newItem = Cache(_item);
-    require(newItem.inChache() == true);
+    //require(newItem.inChache() == true);
     newItem.removeItemFromChache();
     return true;
   }
