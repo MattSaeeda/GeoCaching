@@ -48,22 +48,21 @@ contract GeoCacher is Storage {
   }
 
   function claimOwnershipOfItem(address  _item) public onlyOwner {
-    Storage.updateAddressArray("bag" , _item );
+    Storage.updateAddressArray("bag" , _item );//???
     newItem = Cache(_item);
     newItem.changeItemOwnership(_item);
   }
 
   function listChacherItems() public  onlyOwner view returns ( address[] memory ){
       uint counter = 0;
-      address[] storage t = getAddressArray(bag);
-      for (uint j = 0; j<t.length; j++) {
+      for (uint j = 0; j<getAddressArray("bag").length; j++) {
           counter++;
       }
 
       address[] memory b = new address[](counter);
 
       uint counter2 = 0;
-      for (uint i = 0; i<bag.length; i++) {
+      for (uint i = 0; i<getAddressArray("bag").length; i++) {
           b[counter2] = bag[i];
           counter2++;
       }

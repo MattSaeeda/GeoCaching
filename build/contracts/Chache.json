@@ -490,7 +490,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 168,
-        "sourceUnit": 683,
+        "sourceUnit": 756,
         "src": "33:34:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -504,10 +504,10 @@
               "id": 3,
               "name": "Storage",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 682,
+              "referencedDeclaration": 755,
               "src": "88:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Storage_$682",
+                "typeIdentifier": "t_contract$_Storage_$755",
                 "typeString": "contract Storage"
               }
             },
@@ -517,7 +517,7 @@
           }
         ],
         "contractDependencies": [
-          682
+          755
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -525,7 +525,7 @@
         "id": 167,
         "linearizedBaseContracts": [
           167,
-          682
+          755
         ],
         "name": "Chache",
         "nodeType": "ContractDefinition",
@@ -699,10 +699,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "339:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -713,7 +713,7 @@
                       "lValueRequested": false,
                       "memberName": "setBool",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 647,
+                      "referencedDeclaration": 720,
                       "src": "339:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_bool_$returns$__$",
@@ -829,10 +829,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "474:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -843,7 +843,7 @@
                       "lValueRequested": false,
                       "memberName": "setBool",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 647,
+                      "referencedDeclaration": 720,
                       "src": "474:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_bool_$returns$__$",
@@ -937,10 +937,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "715:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -951,7 +951,7 @@
                       "lValueRequested": false,
                       "memberName": "getAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 484,
+                      "referencedDeclaration": 557,
                       "src": "715:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_address_$",
@@ -1012,10 +1012,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "759:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -1026,7 +1026,7 @@
                       "lValueRequested": false,
                       "memberName": "getString",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 560,
+                      "referencedDeclaration": 633,
                       "src": "759:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_string_memory_ptr_$",
@@ -1087,10 +1087,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "797:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -1101,7 +1101,7 @@
                       "lValueRequested": false,
                       "memberName": "getBool",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 530,
+                      "referencedDeclaration": 603,
                       "src": "797:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bool_$",
@@ -1162,10 +1162,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "836:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -1176,7 +1176,7 @@
                       "lValueRequested": false,
                       "memberName": "getBytes32",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 545,
+                      "referencedDeclaration": 618,
                       "src": "836:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bytes32_$",
@@ -1393,10 +1393,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "992:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -1407,7 +1407,7 @@
                       "lValueRequested": false,
                       "memberName": "setAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 613,
+                      "referencedDeclaration": 686,
                       "src": "992:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_address_$returns$__$",
@@ -1546,10 +1546,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1117:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -1560,7 +1560,7 @@
                       "lValueRequested": false,
                       "memberName": "setString",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 681,
+                      "referencedDeclaration": 754,
                       "src": "1117:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
@@ -1698,10 +1698,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1224:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -1712,7 +1712,7 @@
                       "lValueRequested": false,
                       "memberName": "setBool",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 647,
+                      "referencedDeclaration": 720,
                       "src": "1224:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_bool_$returns$__$",
@@ -1850,10 +1850,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1345:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -1864,7 +1864,7 @@
                       "lValueRequested": false,
                       "memberName": "setBytes32",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 664,
+                      "referencedDeclaration": 737,
                       "src": "1345:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_bytes32_$returns$__$",
@@ -1985,10 +1985,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1484:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -1999,7 +1999,7 @@
                       "lValueRequested": false,
                       "memberName": "getAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 484,
+                      "referencedDeclaration": 557,
                       "src": "1484:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_address_$",
@@ -2122,10 +2122,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1607:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -2136,7 +2136,7 @@
                       "lValueRequested": false,
                       "memberName": "getString",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 560,
+                      "referencedDeclaration": 633,
                       "src": "1607:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_string_memory_ptr_$",
@@ -2258,10 +2258,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1718:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -2272,7 +2272,7 @@
                       "lValueRequested": false,
                       "memberName": "getBool",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 530,
+                      "referencedDeclaration": 603,
                       "src": "1718:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bool_$",
@@ -2394,10 +2394,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1837:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -2408,7 +2408,7 @@
                       "lValueRequested": false,
                       "memberName": "getBytes32",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 545,
+                      "referencedDeclaration": 618,
                       "src": "1837:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bytes32_$",
@@ -2525,7 +2525,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 168,
-        "sourceUnit": 683,
+        "sourceUnit": 756,
         "src": "33:34:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2539,10 +2539,10 @@
               "id": 3,
               "name": "Storage",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 682,
+              "referencedDeclaration": 755,
               "src": "88:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Storage_$682",
+                "typeIdentifier": "t_contract$_Storage_$755",
                 "typeString": "contract Storage"
               }
             },
@@ -2552,7 +2552,7 @@
           }
         ],
         "contractDependencies": [
-          682
+          755
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -2560,7 +2560,7 @@
         "id": 167,
         "linearizedBaseContracts": [
           167,
-          682
+          755
         ],
         "name": "Chache",
         "nodeType": "ContractDefinition",
@@ -2734,10 +2734,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "339:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -2748,7 +2748,7 @@
                       "lValueRequested": false,
                       "memberName": "setBool",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 647,
+                      "referencedDeclaration": 720,
                       "src": "339:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_bool_$returns$__$",
@@ -2864,10 +2864,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "474:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -2878,7 +2878,7 @@
                       "lValueRequested": false,
                       "memberName": "setBool",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 647,
+                      "referencedDeclaration": 720,
                       "src": "474:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_bool_$returns$__$",
@@ -2972,10 +2972,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "715:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -2986,7 +2986,7 @@
                       "lValueRequested": false,
                       "memberName": "getAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 484,
+                      "referencedDeclaration": 557,
                       "src": "715:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_address_$",
@@ -3047,10 +3047,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "759:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -3061,7 +3061,7 @@
                       "lValueRequested": false,
                       "memberName": "getString",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 560,
+                      "referencedDeclaration": 633,
                       "src": "759:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_string_memory_ptr_$",
@@ -3122,10 +3122,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "797:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -3136,7 +3136,7 @@
                       "lValueRequested": false,
                       "memberName": "getBool",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 530,
+                      "referencedDeclaration": 603,
                       "src": "797:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bool_$",
@@ -3197,10 +3197,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "836:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -3211,7 +3211,7 @@
                       "lValueRequested": false,
                       "memberName": "getBytes32",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 545,
+                      "referencedDeclaration": 618,
                       "src": "836:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bytes32_$",
@@ -3428,10 +3428,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "992:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -3442,7 +3442,7 @@
                       "lValueRequested": false,
                       "memberName": "setAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 613,
+                      "referencedDeclaration": 686,
                       "src": "992:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_address_$returns$__$",
@@ -3581,10 +3581,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1117:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -3595,7 +3595,7 @@
                       "lValueRequested": false,
                       "memberName": "setString",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 681,
+                      "referencedDeclaration": 754,
                       "src": "1117:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_string_memory_ptr_$returns$__$",
@@ -3733,10 +3733,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1224:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -3747,7 +3747,7 @@
                       "lValueRequested": false,
                       "memberName": "setBool",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 647,
+                      "referencedDeclaration": 720,
                       "src": "1224:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_bool_$returns$__$",
@@ -3885,10 +3885,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1345:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -3899,7 +3899,7 @@
                       "lValueRequested": false,
                       "memberName": "setBytes32",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 664,
+                      "referencedDeclaration": 737,
                       "src": "1345:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes32_$_t_bytes32_$returns$__$",
@@ -4020,10 +4020,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1484:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -4034,7 +4034,7 @@
                       "lValueRequested": false,
                       "memberName": "getAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 484,
+                      "referencedDeclaration": 557,
                       "src": "1484:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_address_$",
@@ -4157,10 +4157,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1607:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -4171,7 +4171,7 @@
                       "lValueRequested": false,
                       "memberName": "getString",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 560,
+                      "referencedDeclaration": 633,
                       "src": "1607:17:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_string_memory_ptr_$",
@@ -4293,10 +4293,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1718:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -4307,7 +4307,7 @@
                       "lValueRequested": false,
                       "memberName": "getBool",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 530,
+                      "referencedDeclaration": 603,
                       "src": "1718:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bool_$",
@@ -4429,10 +4429,10 @@
                         "name": "Storage",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 682,
+                        "referencedDeclaration": 755,
                         "src": "1837:7:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Storage_$682_$",
+                          "typeIdentifier": "t_type$_t_contract$_Storage_$755_$",
                           "typeString": "type(contract Storage)"
                         }
                       },
@@ -4443,7 +4443,7 @@
                       "lValueRequested": false,
                       "memberName": "getBytes32",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 545,
+                      "referencedDeclaration": 618,
                       "src": "1837:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_bytes32_$returns$_t_bytes32_$",
@@ -4536,7 +4536,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.5",
-  "updatedAt": "2019-03-27T19:03:42.175Z",
+  "updatedAt": "2019-03-27T19:31:02.184Z",
   "devdoc": {
     "methods": {}
   },
