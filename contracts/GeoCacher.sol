@@ -6,9 +6,16 @@ import "../contracts/Storage.sol";
 contract Cache {
       // function itemOwner() public pure returns (address){}
       function name() public pure returns (string memory) {}
-      function inChache() public pure returns (bool) {}
+      function inCache() public pure returns (bool) {}
       function coordinates() public pure returns (bytes32) {}
+      function getinCache() public pure returns (bool){}
       function putItemInCache() public;
+      function setName() public;
+      function setinCache() public;
+      function setCoordinates() public;
+      function getOwnership() public view returns(address);
+      function getName() public view returns(string memory);
+      function getCoordinates() public view returns(bytes32);
       function removeItemFromChache() public;
       function showItemSpecs() public returns(address, string memory, bool, bytes32);
       function changeItemOwnership(address) public;
@@ -23,6 +30,7 @@ contract GeoCacher is Storage {
   }
 
   address[] bag;
+  
   Cache newItem;
 
   modifier onlyOwner() {
@@ -84,7 +92,7 @@ contract GeoCacher is Storage {
 
   function eliminateItemFromCache(address _item) public onlyOwner returns (bool) {
     newItem = Cache(_item);
-    //require(newItem.inChache() == true);
+    require(newItem.getinCache() == true);
     newItem.removeItemFromChache();
     return true;
   }
