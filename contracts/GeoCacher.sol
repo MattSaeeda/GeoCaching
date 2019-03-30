@@ -1,10 +1,10 @@
 
 pragma solidity >0.4.99 <0.6.0;
-//import "../contracts/Cache.sol";
+
 import "../contracts/Storage.sol";
 
 contract Cache {
-      // function itemOwner() public pure returns (address){}
+      
       function name() public pure returns (string memory) {}
       function itemOwner() public pure returns(address){}
       function inCache() public pure returns (bool) {}

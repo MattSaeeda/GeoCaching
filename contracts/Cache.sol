@@ -4,26 +4,25 @@ import "../contracts/Storage.sol";
 
 contract Cache is Storage {
 
-      //address public owner;
       string public name;
       address public itemOwner;
       bool public inCache;
       bytes32  public coordinates;
       
       function putItemInCache() public {
-            //inCache = true;
+            
             Storage.setBool("inCache" , true);
 
       }
 
       function removeItemFromChache() public {
-            //inCache = false;
+            
             Storage.setBool("inCache" , false);
 
       }
 
       function showItemSpecs() public view returns(address,string memory, bool, bytes32) {
-           //return(address(itemOwner), string(name), bool(inCache), bytes32 (coordinates));
+           
            Storage.getAddress("itemOwner");
            Storage.getString("name");
            Storage.getBool("inCache");
@@ -31,7 +30,7 @@ contract Cache is Storage {
       }
 
       function changeItemOwnership(address _newOwner) public {
-            //itemOwner = _newOwner;
+            
             Storage.setAddress("itemOwner" , _newOwner);
       }
       

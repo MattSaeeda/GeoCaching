@@ -1,11 +1,9 @@
 const GeoCacher = artifacts.require("GeoCacher");
 const Cache = artifacts.require("Cache");
 const Storage = artifacts.require("Storage");
-const { expectEvent, shouldFail } = require('openzeppelin-test-helpers');
+const {shouldFail } = require('openzeppelin-test-helpers');
 var assert = require('chai').assert
-//import Web3 from 'web3'
-//const {Web3} = require("Web3")
-//const { assert } = require('chai');
+
 const mode = process.env.MODE;
 
 let geoCacherInstance;
@@ -135,7 +133,7 @@ describe('Functions Tests' , function(){
     console.log(cacheInstance.address);
     await geoCacherInstance.claimOwnershipOfItem(cacheInstance.address);
     //await cacheInstance.changeItemOwnership(owner);
-   console.log(cacheInstance.itemOwner());
+   console.log(cacheInstance.getOwnership());
     assert.equal(
       (await cacheInstance.getOwnership(),
       owner
@@ -143,7 +141,7 @@ describe('Functions Tests' , function(){
 
 
   });
-  it("should fail wrong item type given to claimOwnershipOfItem", async function() {});
+  it("should fail when wrong item type given to claimOwnershipOfItem", async function() {});
   it("should be able to list Cacher's items", async function() {});
   it("should be able to show an item's specs", async function() {});
   it("should fail if wrong address passed to show item specs", async function() {});
