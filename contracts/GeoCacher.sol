@@ -1,9 +1,27 @@
-
 pragma solidity >0.4.99 <0.6.0;
 
-import "../contracts/Storage.sol";
+//import "../contracts/SatetStorage.sol";
 
-contract Cache {
+interface StateStorage { 
+    // function storeBytes(bytes32 key, bytes calldata value) external;
+    // function getBytes(bytes32 key) external returns(bytes memory);
+
+    function getAddress(bytes32 key) external returns (address);
+    function getAddressArray(bytes32 key) external returns (address[] memory);
+    function getUint(bytes32 key) external returns (uint);
+    function getBool(bytes32 key) external returns (bool);
+    function getBytes32(bytes32 key) external returns (bytes32);
+    function getString(bytes32 key) external returns (string memory);
+    function setAddressArray(bytes32 key, address[] calldata value) external;
+    function updateAddressArray(bytes32 key, address  value) external;
+    function setAddress(bytes32 key, address value) external;
+    function setUint(bytes32 key, uint value) external;
+    function setBool(bytes32 key, bool value) external;
+    function setBytes32(bytes32 key, bytes32 value) external;
+    function setString(bytes32 key, string calldata value) external;
+}
+
+contract Item {
       
       function name() public pure returns (string memory) {}
       function itemOwner() public pure returns(address){}
@@ -22,19 +40,17 @@ contract Cache {
       function changeItemOwnership(address) public;
   }   
 
-contract GeoCacher is Storage {
+contract GeoCacher  {
 
   address public owner;
-  
-
-  constructor() public {
-    owner = msg.sender;
-  }
-
+  Item public newItem;
+  StateStorage public _stateStorage;
   address[] bag;
-  Cache public newItem;
-  Storage public centralStorage;
-  
+
+ constructor(StateStorage stateStorage) public {
+        _stateStorage = stateStorage;
+        owner = msg.sender;
+      }
 
   modifier onlyOwner() {
 	  require(msg.sender == owner);
@@ -55,25 +71,25 @@ contract GeoCacher is Storage {
 
   function setTheBag() private {
     address[] memory someBag;
-    Storage.setAddressArray("bag" , someBag );
+    _stateStorage.setAddressArray("bag" , someBag );
   }
 
   function claimOwnershipOfItem(address  _item) public onlyOwner {
-    Storage.updateAddressArray("bag" , _item );//???
-    newItem = Cache(_item);
+    _stateStorage.updateAddressArray("bag" , _item );//???
+    newItem = Item(_item);
     newItem.changeItemOwnership(_item);
   }
 
-  function listChacherItems() public  onlyOwner view returns ( address[] memory ){
+  function listChacherItems() public  onlyOwner  returns ( address[] memory ){
       uint counter = 0;
-      for (uint j = 0; j<Storage.getAddressArray("bag").length; j++) {
+      for (uint j = 0; j<_stateStorage.getAddressArray("bag").length; j++) {
           counter++;
       }
 
       address[] memory b = new address[](counter);
 
       uint counter2 = 0;
-      for (uint i = 0; i<Storage.getAddressArray("bag").length; i++) {
+      for (uint i = 0; i<_stateStorage.getAddressArray("bag").length; i++) {
           b[counter2] = bag[i];
           counter2++;
       }
@@ -81,20 +97,20 @@ contract GeoCacher is Storage {
   }
 
   function showItemInfo(address  _item) public  returns (address, string memory, bool, bytes32){
-    newItem = Cache(_item);
+    newItem = Item(_item);
     newItem.showItemSpecs();
     
   }
 
   function placeItemInCache(address _item) public onlyOwner returns(bool) {
-    newItem = Cache(_item);
+    newItem = Item(_item);
     //require(newItem.getinCache("inCache") == false);
     newItem.putItemInCache();
     return true;
   }
 
   function eliminateItemFromCache(address _item) public onlyOwner returns (bool) {
-    newItem = Cache(_item);
+    newItem = Item(_item);
     require(newItem.getinCache() == true);
     newItem.removeItemFromChache();
     return true;

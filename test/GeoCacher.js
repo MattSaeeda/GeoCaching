@@ -1,5 +1,5 @@
 const GeoCacher = artifacts.require("GeoCacher");
-const Cache = artifacts.require("Cache");
+const Item = artifacts.require("Item");
 const Storage = artifacts.require("Storage");
 const {shouldFail } = require('openzeppelin-test-helpers');
 var assert = require('chai').assert;
@@ -130,13 +130,13 @@ describe('Functions Tests' , function(){
   it("should be able to claim an item ownership", async function() {
     const owner = accounts[0];
     console.log(owner);
-    cacheInstance = await Cache.new();
-    storageInstance = await Storage.new();
-    console.log(cacheInstance.address);
-    console.log(Storage.address);
-    await geoCacherInstance.claimOwnershipOfItem(cacheInstance.address);
-    await cacheInstance.getOwnership()
-    console.log(cacheInstance.getOwnership())
+    itemInstance = await Item.new();
+    stateStorageInstance = await StateStorage.new();
+    console.log(itemInstance.address);
+    console.log(stateStorage.address);
+    await geoCacherInstance.claimOwnershipOfItem(itemInstance.address);
+    await itemInstance.getOwnership()
+    console.log(itemInstance.getOwnership())
     assert.equal(
       (await cacheInstance.getOwnership(),
       owner
@@ -166,7 +166,7 @@ describe('Functions Tests' , function(){
 
 });
 
-//Helper functions from : https://github.com/miguelmota/solidity-create2-example.git by : Miguel Mota
+//Helper functions from : https://github.com/miguelmota/solidity-create2-example.git by  Miguel Mota
 
 function buildCreate2Address(creatorAddress, saltHex, byteCode) {
   return `0x${web3.utils.sha3(`0x${[
