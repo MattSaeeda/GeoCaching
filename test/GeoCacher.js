@@ -1,6 +1,6 @@
 const GeoCacher = artifacts.require("GeoCacher");
 const Item = artifacts.require("Item");
-const Storage = artifacts.require("Storage");
+const Storage = artifacts.require("StateStorage");
 const {shouldFail } = require('openzeppelin-test-helpers');
 var assert = require('chai').assert;
 var should = require('chai').should;
