@@ -25,14 +25,16 @@ contract Cache {
 contract GeoCacher is Storage {
 
   address public owner;
+  
 
   constructor() public {
     owner = msg.sender;
   }
 
   address[] bag;
+  Cache public newItem;
+  Storage public centralStorage;
   
-  Cache newItem;
 
   modifier onlyOwner() {
 	  require(msg.sender == owner);
@@ -51,10 +53,10 @@ contract GeoCacher is Storage {
     return addr;
   }
 
-  // function setTheBag() private {
-  //   address[] memory someBag;
-  //   Storage.setAddressArray("bag" , someBag );
-  // }
+  function setTheBag() private {
+    address[] memory someBag;
+    Storage.setAddressArray("bag" , someBag );
+  }
 
   function claimOwnershipOfItem(address  _item) public onlyOwner {
     Storage.updateAddressArray("bag" , _item );//???
@@ -64,14 +66,14 @@ contract GeoCacher is Storage {
 
   function listChacherItems() public  onlyOwner view returns ( address[] memory ){
       uint counter = 0;
-      for (uint j = 0; j<getAddressArray("bag").length; j++) {
+      for (uint j = 0; j<Storage.getAddressArray("bag").length; j++) {
           counter++;
       }
 
       address[] memory b = new address[](counter);
 
       uint counter2 = 0;
-      for (uint i = 0; i<getAddressArray("bag").length; i++) {
+      for (uint i = 0; i<Storage.getAddressArray("bag").length; i++) {
           b[counter2] = bag[i];
           counter2++;
       }

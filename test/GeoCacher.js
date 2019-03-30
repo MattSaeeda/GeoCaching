@@ -2,8 +2,8 @@ const GeoCacher = artifacts.require("GeoCacher");
 const Cache = artifacts.require("Cache");
 const Storage = artifacts.require("Storage");
 const {shouldFail } = require('openzeppelin-test-helpers');
-var assert = require('chai').assert
-
+var assert = require('chai').assert;
+var should = require('chai').should;
 const mode = process.env.MODE;
 
 let geoCacherInstance;
@@ -52,7 +52,7 @@ contract("GeoCacher", accounts => {
       );
 
       await shouldFail.reverting(geoCacherInstance.placeItemInCache(itemAddress, 
-        { from: anotherAccount }));
+        { from: anotherAccount }) );
     });
 
     it("Should fail if a non-owner calls eliminateItemFromCache with the onlyOwner modifier", async function() {
@@ -129,11 +129,14 @@ describe('Functions Tests' , function(){
  // it("should fail if wrong type of salt given to create item", async function() {});
   it("should be able to claim an item ownership", async function() {
     const owner = accounts[0];
+    console.log(owner);
     cacheInstance = await Cache.new();
+    storageInstance = await Storage.new();
     console.log(cacheInstance.address);
+    console.log(Storage.address);
     await geoCacherInstance.claimOwnershipOfItem(cacheInstance.address);
-    //await cacheInstance.changeItemOwnership(owner);
-   console.log(cacheInstance.getOwnership());
+    await cacheInstance.getOwnership()
+    console.log(cacheInstance.getOwnership())
     assert.equal(
       (await cacheInstance.getOwnership(),
       owner
@@ -141,7 +144,11 @@ describe('Functions Tests' , function(){
 
 
   });
-  it("should fail when wrong item type given to claimOwnershipOfItem", async function() {});
+  it("should fail when wrong item type given to claimOwnershipOfItem", async function() {
+    const owner = accounts[0];
+    const itemAddress = 123;
+    await should.Throw(geoCacherInstance.claimOwnershipOfItem(itemAddress));
+  });
   it("should be able to list Cacher's items", async function() {});
   it("should be able to show an item's specs", async function() {});
   it("should fail if wrong address passed to show item specs", async function() {});
