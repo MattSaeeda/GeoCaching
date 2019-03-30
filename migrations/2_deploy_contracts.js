@@ -10,3 +10,9 @@ module.exports = function(deployer) {
   deployer.deploy(Cache);
 };
 
+var Storage = artifacts.require("Storage");
+
+module.exports = function(deployer) {
+  deployer.deploy(Storage);
+};
+

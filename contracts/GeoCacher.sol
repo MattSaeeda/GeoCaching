@@ -6,6 +6,7 @@ import "../contracts/Storage.sol";
 contract Cache {
       // function itemOwner() public pure returns (address){}
       function name() public pure returns (string memory) {}
+      function itemOwner() public pure returns(address){}
       function inCache() public pure returns (bool) {}
       function coordinates() public pure returns (bytes32) {}
       function getinCache() public pure returns (bool){}
@@ -38,7 +39,7 @@ contract GeoCacher is Storage {
 		_;
 	}
   
-  function createItem(bytes memory code, uint256 salt) public onlyOwner returns (address){
+  function createItem(bytes memory code, uint256 salt) public  returns (address){
     address addr;
     assembly {
       addr := create2(0, add(code, 0x20), mload(code), salt)
@@ -50,10 +51,10 @@ contract GeoCacher is Storage {
     return addr;
   }
 
-  function setTheBag() private {
-    address[] memory someBag;
-    Storage.setAddressArray("bag" , someBag );
-  }
+  // function setTheBag() private {
+  //   address[] memory someBag;
+  //   Storage.setAddressArray("bag" , someBag );
+  // }
 
   function claimOwnershipOfItem(address  _item) public onlyOwner {
     Storage.updateAddressArray("bag" , _item );//???

@@ -2,7 +2,7 @@ pragma solidity >0.4.99 <0.6.0;
 
 import "../contracts/Storage.sol";
 
-contract Chache is Storage {
+contract Cache is Storage {
 
       //address public owner;
       string public name;
