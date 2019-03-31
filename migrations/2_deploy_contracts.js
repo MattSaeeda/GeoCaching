@@ -4,15 +4,15 @@ module.exports = function(deployer) {
   deployer.deploy(GeoCacher);
 };
 
-var Cache = artifacts.require("Cache");
+var Item = artifacts.require("Item");
 
 module.exports = function(deployer) {
-  deployer.deploy(Cache);
+  deployer.deploy(Item);
 };
 
-var Storage = artifacts.require("Storage");
+var StateStorage = artifacts.require("StateStorage");
 
 module.exports = function(deployer) {
-  deployer.deploy(Storage);
+  deployer.deploy(StateStorage);
 };
 
