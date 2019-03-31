@@ -1,10 +1,6 @@
 pragma solidity >0.4.99 <0.6.0;
 
-//import "../contracts/Storage.sol";
 interface StateStorage { 
-    // function storeBytes(bytes32 key, bytes calldata value) external;
-    // function getBytes(bytes32 key) external returns(bytes memory);
-
     function getAddress(bytes32 key) external returns (address);
     function getAddressArray(bytes32 key) external returns (address[] memory);
     function getUint(bytes32 key) external returns (uint);
@@ -29,19 +25,17 @@ contract Item {
       bytes32  public coordinates;
 
       constructor(StateStorage stateStorage) public {
-        _stateStorage = stateStorage;
+            _stateStorage = stateStorage;
       }
       
       function putItemInCache() public {
             
             _stateStorage.setBool("inCache" , true);
-
       }
 
       function removeItemFromChache() public {
             
             _stateStorage.setBool("inCache" , false);
-
       }
 
       function showItemSpecs() public  returns(address,string memory, bool, bytes32) {
