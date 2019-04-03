@@ -40,12 +40,13 @@ contract GeoCacher  {
 
     address public owner;
     Item public newItem;
-    StateStorage public _stateStorage;
+    StateStorage public stateStorage;
     address[] bag;
 
-    constructor(StateStorage stateStorage) public {
-        _stateStorage = stateStorage;
+    constructor(StateStorage _stateStorage, Item _newItem) public {
         owner = msg.sender;
+        stateStorage = _stateStorage;
+        newItem = _newItem;
     }
 
     modifier onlyOwner() {
@@ -66,23 +67,23 @@ contract GeoCacher  {
 
     function setTheBag() private {
         address[] memory someBag;
-        _stateStorage.setAddressArray("bag" , someBag );
+        stateStorage.setAddressArray("bag" , someBag );
     }
 
     function claimOwnershipOfItem(address  _item) public onlyOwner {
-        _stateStorage.updateAddressArray("bag" , _item );//???
+        stateStorage.updateAddressArray("bag" , _item );//???
         newItem = Item(_item);
         newItem.changeItemOwnership(_item);
     }
 
     function listChacherItems() public  onlyOwner  returns ( address[] memory ){
         uint counter = 0;
-        for (uint j = 0; j<_stateStorage.getAddressArray("bag").length; j++) {
+        for (uint j = 0; j<stateStorage.getAddressArray("bag").length; j++) {
             counter++;
         }
         address[] memory b = new address[](counter);
         uint counter2 = 0;
-        for (uint i = 0; i<_stateStorage.getAddressArray("bag").length; i++) {
+        for (uint i = 0; i<stateStorage.getAddressArray("bag").length; i++) {
             b[counter2] = bag[i];
             counter2++;
         }
