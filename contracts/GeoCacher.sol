@@ -39,14 +39,13 @@ contract Item {
 contract GeoCacher  {
 
     address public owner;
-    //Item public newItem;
     StateStorage public stateStorage;
     address[] bag;
 
     constructor(StateStorage _stateStorage) public {
         owner = msg.sender;
         stateStorage = _stateStorage;
-        //newItem = _newItem;
+       
     }
 
     modifier onlyOwner() {
@@ -69,13 +68,7 @@ contract GeoCacher  {
         address[] memory someBag;
         stateStorage.setAddressArray("bag" , someBag );
     }
-
-    // function claimOwnershipOfItem(address  _item) public onlyOwner {
-    //     stateStorage.updateAddressArray("bag" , _item );//???
-    //     newItem = Item(_item);
-    //     newItem.changeItemOwnership(_item);
-    // }
-
+    
     function claimOwnershipOfItem(Item _item) public onlyOwner{
         // 
         stateStorage.updateAddressArray("bag" , address(_item ));
